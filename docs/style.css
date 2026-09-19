@@ -21,6 +21,9 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:'Amiri','Noto
 .pair .arrow{color:var(--gold-ink);font-size:1.15rem}
 .tag{font-family:'Reem Kufi',system-ui,sans-serif;font-size:.64rem;letter-spacing:.09em;padding:.12rem .45rem;border:1px solid currentColor;border-radius:2px}
 .tag-bad{color:#E9A79E}.tag-good{color:#D8C08A}
+.install{display:inline-flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-top:1.6rem;padding:.55rem .8rem;background:rgba(255,255,255,.06);border:1px solid rgba(216,192,138,.42);border-radius:3px}
+.install-tag{font-family:'Reem Kufi',system-ui,sans-serif;font-size:.68rem;letter-spacing:.08em;color:#D8C08A;text-transform:uppercase}
+code.cmd{font-family:'Cascadia Mono',Consolas,'Courier New',monospace;font-size:.92rem;background:none;color:#fff;direction:ltr;display:inline-block;padding:0;overflow-wrap:anywhere}
 main{padding:3rem 0 1rem}
 .prose h2,.titles h2{font-family:'Reem Kufi',system-ui,sans-serif;font-size:clamp(1.3rem,3vw,1.6rem);line-height:1.55;color:var(--lapis);margin:3rem 0 1.1rem;padding-bottom:.5rem;border-bottom:1px solid var(--rule)}
 .prose h2:first-child{margin-top:0}

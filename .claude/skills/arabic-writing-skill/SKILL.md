@@ -344,6 +344,6 @@ graph TD
 ## ٦. مراجع تفصيلية ملحقة (Skill References)
 
 للتوسع ومطالعة مئات الأمثلة والتحويلات المسردة:
-- [معجم الألفاظ والتعابير العرنجية وبدائلها الفصيحة](file:///c:/Users/saif1/Desktop/arabic_writing_skill/references/vocabulary_and_idioms.md)
-- [سجل التحويلات الأسلوبية والنحوية المتقدمة](file:///c:/Users/saif1/Desktop/arabic_writing_skill/references/stylistic_patterns.md)
-- [نماذج وفقرات كاملة قبل وبعد التحوير الفصيح](file:///c:/Users/saif1/Desktop/arabic_writing_skill/examples/before_after_texts.md)
+- [معجم الألفاظ والتعابير العرنجية وبدائلها الفصيحة](references/vocabulary_and_idioms.md)
+- [سجل التحويلات الأسلوبية والنحوية المتقدمة](references/stylistic_patterns.md)
+- [نماذج وفقرات كاملة قبل وبعد التحوير الفصيح](examples/before_after_texts.md)

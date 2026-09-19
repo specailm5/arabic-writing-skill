@@ -42,6 +42,7 @@
 <h1>الكتابة العربية الفصيحة ونبذ العَرَنْجِيَّة</h1>
 <p class="lede">مهارة تُعلِّم وكلاء الذكاء الاصطناعي أن يكتبوا العربية على سَنَن كلام العرب، وأن يطرحوا التراكيب الإفرنجية المترجمة حرفياً.</p>
 <div class="pair"><span class="side"><span class="tag tag-bad">عرنجي</span><del>قام بزيارة</del></span><span class="arrow" aria-hidden="true">←</span><span class="side"><span class="tag tag-good">فصيح</span><ins>زار</ins></span></div>
+<div class="install"><span class="install-tag">تثبيت سريع</span><code class="cmd">npx skills add specailm5/arabic-writing-skill -g -y</code></div>
 </div>
 </header>
 <main id="main">
@@ -62,7 +63,12 @@
 <a class="card" href="before-after.html"><h3>نماذج قبل وبعد</h3><p>ثلاثة نصوص كاملة — سياسي وإداري وفكري — عرنجي ثم فصيح ثم التحليل النقدي.</p></a>
 </div>
 <h2>التثبيت</h2>
-<p>المهارة ملفات نصية صرفة، تُنسخ إلى مجلد المهارات في بيئتك فيُكتشفها الوكيل تلقائياً عند صياغة أي نص عربي.</p>
+<p>المهارة ملفات نصية صرفة، تُنسخ إلى مجلد المهارات في بيئتك فيُكتشفها الوكيل تلقائياً عند صياغة أي نص عربي. وأسرع طريقة أمرٌ واحد عبر مدير مهارات الوكلاء:</p>
+<pre><code>npx skills add specailm5/arabic-writing-skill -g -y</code></pre>
+<p>ولاختيار بيئات بعينها أو التثبيت داخل مشروع محدد:</p>
+<pre><code>npx skills add specailm5/arabic-writing-skill -a claude-code -a codex
+npx skills add specailm5/arabic-writing-skill --skill arabic-writing-skill -g -y</code></pre>
+<p>أو انسخ الملفات يدوياً:</p>
 <pre><code>git clone https://github.com/specailm5/arabic-writing-skill.git
 mkdir -p ~/.claude/skills/arabic-writing-skill
 cp -r arabic-writing-skill/SKILL.md arabic-writing-skill/references arabic-writing-skill/examples ~/.claude/skills/arabic-writing-skill/</code></pre>

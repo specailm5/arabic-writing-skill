@@ -43,7 +43,24 @@ arabic_writing_skill/
 
 ---
 
-### أولاً: التثبيت العام لبيئة Claude Code و Codex و Antigravity (موصى به)
+### أولاً: التثبيت بأمر واحد عبر `npx` (الطريقة الأسرع — موصى به)
+
+تُثبَّت المهارة في بيئات الوكلاء المدعومة (Claude Code، Codex، Opencode، Cursor، Gemini وغيرها) بأمرٍ واحد عبر مدير مهارات الوكلاء:
+
+```bash
+npx skills add specailm5/arabic-writing-skill -g -y
+```
+
+ولاختيار بيئات بعينها أو التثبيت داخل مشروع محدد:
+
+```bash
+npx skills add specailm5/arabic-writing-skill -a claude-code -a codex
+npx skills add specailm5/arabic-writing-skill --skill arabic-writing-skill -g -y
+```
+
+---
+
+### ثانياً: التثبيت العام لبيئة Claude Code و Codex و Antigravity (يدوياً)
 
 لتفعيل المهارة في كل مشروعاتك دون الحاجة لتكرار تثبيتها في كل مجلد:
 
@@ -79,7 +96,7 @@ cp -r SKILL.md references examples ~/.gemini/config/skills/arabic-writing-skill/
 
 ---
 
-### ثانياً: التثبيت المحلي داخل مشروع محدد (VS Code Workspace Harness)
+### ثالثاً: التثبيت المحلي داخل مشروع محدد (VS Code Workspace Harness)
 
 إذا أردت حصر المهارة داخل مستودع أو مجلد عمل واحد في VS Code:
 
@@ -94,7 +111,7 @@ Copy-Item -Recurse -Force "path\to\SKILL.md", "path\to\references", "path\to\exa
 
 ---
 
-### ثالثاً: الاستخدام اليدوي (Direct System Prompt / Custom Instructions)
+### رابعاً: الاستخدام اليدوي (Direct System Prompt / Custom Instructions)
 
 إذا كنت تستخدم واجهات الويب (مثل ChatGPT أو Claude أو Gemini) مباشرة دون بيئة برمجية:
 * افتح ملف [`SKILL.md`](SKILL.md) وانسخ محتواه وضعه في خانة **التعليمات المخصصة (Custom Instructions)** أو **System Prompt**.
