@@ -20,19 +20,22 @@
 ## 📂 بنية المهارة ومكوناتها
 
 ```
-arabic_writing_skill/
+arabic-writing-skill/
 │
 ├── SKILL.md                              # الدليل الأساسي للمهارة (الأصول والأوامر والنواهي)
 │
-├── references/
+├── references/                           # المعاجم والجداول المرجعية التفصيلية
 │   ├── vocabulary_and_idioms.md          # معجم الألفاظ والتعابير العرنجية وبدائلها الفصيحة
 │   └── stylistic_patterns.md             # سجل التحويلات الأسلوبية والنحوية المتقدمة
 │
-├── examples/
-│   └── before_after_texts.md             # نماذج تطبيقية كاملة (سياسية، إدارية، أدبية) قبل وبعد التحوير
+├── examples/                             # دراسات الحالة والنماذج التطبيقية
+│   └── before_after_texts.md             # نماذج كاملة (سياسية، إدارية، فكرية) قبل وبعد التحوير
 │
-├── aranjiya.pdf                          # نسخة كتاب «العرنجية» الأصلية (المصدر المرجعي)
-└── aranjiya_text.txt                     # النص الكامل المستخرج للبحث والرجوع
+├── docs/                                 # الموقع المرجعي الإلكتروني والتوثيق (GitHub Pages)
+│
+├── .agents/skills/arabic-writing-skill/  # مسار الاكتشاف التلقائي لبيئات Codex و Antigravity
+│
+└── .claude/skills/arabic-writing-skill/  # مسار الاكتشاف التلقائي لبيئة Claude Code
 ```
 
 ---
