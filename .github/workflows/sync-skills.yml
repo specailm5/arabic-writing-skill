@@ -1,0 +1,60 @@
+name: Sync Duplicate Skill Files
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - 'SKILL.md'
+      - 'references/**'
+      - 'examples/**'
+      - 'scripts/**'
+      - 'resources/**'
+      - '.agents/skills/arabic-writing-skill/**'
+      - '.claude/skills/arabic-writing-skill/**'
+  workflow_dispatch:
+
+concurrency:
+  group: sync-skills-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  sync-mirrors:
+    name: Synchronize Skill Mirrors
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository with full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run skill synchronization script
+        run: python .github/scripts/sync_skills.py --verbose
+
+      - name: Commit and push synchronized files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Stage skill files and mirrored directories
+          git add SKILL.md references examples .agents .claude
+          
+          if [ -d "scripts" ]; then git add scripts; fi
+          if [ -d "resources" ]; then git add resources; fi
+
+          if git diff --staged --quiet; then
+            echo "All skill mirrors are synchronized. No commit needed."
+          else
+            echo "Differences detected and synchronized. Committing changes..."
+            git commit -m "chore(sync): synchronize duplicated skill files across mirrors [skip ci]"
+            git push
+          fi
