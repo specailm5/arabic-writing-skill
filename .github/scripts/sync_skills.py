@@ -3,7 +3,8 @@
 Sync Skills Script (sync_skills.py)
 -----------------------------------
 Synchronizes the Agent Skills payload across the three discovery locations:
-  1. Root repository:
+  1. skills/arabic-writing-skill/  (canonical source - the standard Agent Skills
+     layout, discovered by both `npx skills` and `gh skill`)
      - SKILL.md
      - references/
      - examples/
@@ -20,7 +21,7 @@ Resolution Strategy:
      - Committed N commits ago: Rank N
      - Untracked on disk: Rank -1
      - Non-existent: Rank infinity (999999999)
-  2. If ranks are tied, canonical priority order applies: root > agents > claude.
+  2. If ranks are tied, canonical priority order applies: skills > agents > claude.
   3. The location with the minimum (rank, priority) tuple is chosen as the source of truth.
   4. If the winner does not exist on disk (was deleted in latest commit),
      the file is removed from the other locations.
@@ -47,7 +48,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
 # Tuple of (location_name, relative_base_path, priority_index)
 LOCATIONS: List[Tuple[str, Path, int]] = [
-    ("root", REPO_ROOT, 0),
+    ("skills", REPO_ROOT / "skills" / "arabic-writing-skill", 0),
     ("agents", REPO_ROOT / ".agents" / "skills" / "arabic-writing-skill", 1),
     ("claude", REPO_ROOT / ".claude" / "skills" / "arabic-writing-skill", 2),
 ]

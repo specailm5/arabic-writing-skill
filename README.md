@@ -28,14 +28,13 @@
 ```
 arabic-writing-skill/
 │
-├── SKILL.md                              # الدليل الأساسي للمهارة (الأصول والأوامر والنواهي)
-│
-├── references/                           # المعاجم والجداول المرجعية التفصيلية
-│   ├── vocabulary_and_idioms.md          # معجم الألفاظ والتعابير العرنجية وبدائلها الفصيحة
-│   └── stylistic_patterns.md             # سجل التحويلات الأسلوبية والنحوية المتقدمة
-│
-├── examples/                             # دراسات الحالة والنماذج التطبيقية
-│   └── before_after_texts.md             # نماذج كاملة (سياسية، إدارية، فكرية) قبل وبعد التحوير
+├── skills/arabic-writing-skill/          # المهارة (تركيب Agent Skills القياسي)
+│   ├── SKILL.md                          # الدليل الأساسي للمهارة (الأصول والأوامر والنواهي)
+│   ├── references/                       # المعاجم والجداول المرجعية التفصيلية
+│   │   ├── vocabulary_and_idioms.md      # معجم الألفاظ والتعابير العرنجية وبدائلها الفصيحة
+│   │   └── stylistic_patterns.md         # سجل التحويلات الأسلوبية والنحوية المتقدمة
+│   └── examples/                         # دراسات الحالة والنماذج التطبيقية
+│       └── before_after_texts.md         # نماذج كاملة (سياسية، إدارية، فكرية) قبل وبعد التحوير
 │
 ├── docs/                                 # الموقع المرجعي الإلكتروني والتوثيق (GitHub Pages)
 │
@@ -75,32 +74,37 @@ npx skills add specailm5/arabic-writing-skill --skill arabic-writing-skill -g -y
 
 #### لنظام Windows (PowerShell):
 ```powershell
+# مصدر المهارة داخل المستودع
+$src = "skills\arabic-writing-skill"
+
 # 1. تثبيت لبيئة Claude Code
 New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\skills\arabic-writing-skill"
-Copy-Item -Recurse -Force "SKILL.md", "references", "examples" "$env:USERPROFILE\.claude\skills\arabic-writing-skill\"
+Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.claude\skills\arabic-writing-skill\"
 
 # 2. تثبيت لبيئة Codex و Agent Skills العامة
 New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.agents\skills\arabic-writing-skill"
-Copy-Item -Recurse -Force "SKILL.md", "references", "examples" "$env:USERPROFILE\.agents\skills\arabic-writing-skill\"
+Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.agents\skills\arabic-writing-skill\"
 
 # 3. تثبيت لبيئة Google Antigravity / Gemini
 New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.gemini\config\skills\arabic-writing-skill"
-Copy-Item -Recurse -Force "SKILL.md", "references", "examples" "$env:USERPROFILE\.gemini\config\skills\arabic-writing-skill\"
+Copy-Item -Recurse -Force "$src\*" "$env:USERPROFILE\.gemini\config\skills\arabic-writing-skill\"
 ```
 
 #### لنظام macOS / Linux (Bash):
 ```bash
+src=skills/arabic-writing-skill
+
 # 1. لبيئة Claude Code
 mkdir -p ~/.claude/skills/arabic-writing-skill
-cp -r SKILL.md references examples ~/.claude/skills/arabic-writing-skill/
+cp -r "$src/." ~/.claude/skills/arabic-writing-skill/
 
 # 2. لبيئة Codex و Agent Harness
 mkdir -p ~/.agents/skills/arabic-writing-skill
-cp -r SKILL.md references examples ~/.agents/skills/arabic-writing-skill/
+cp -r "$src/." ~/.agents/skills/arabic-writing-skill/
 
 # 3. لبيئة Antigravity / Gemini
 mkdir -p ~/.gemini/config/skills/arabic-writing-skill
-cp -r SKILL.md references examples ~/.gemini/config/skills/arabic-writing-skill/
+cp -r "$src/." ~/.gemini/config/skills/arabic-writing-skill/
 ```
 
 ---
@@ -113,7 +117,7 @@ cp -r SKILL.md references examples ~/.gemini/config/skills/arabic-writing-skill/
 ```powershell
 # داخل مجلد مشروعك الحالي:
 New-Item -ItemType Directory -Force -Path ".agents\skills\arabic-writing-skill"
-Copy-Item -Recurse -Force "path\to\SKILL.md", "path\to\references", "path\to\examples" ".agents\skills\arabic-writing-skill\"
+Copy-Item -Recurse -Force "path\to\skills\arabic-writing-skill\*" ".agents\skills\arabic-writing-skill\"
 ```
 
 2. بمجرد فتح المشروع في **VS Code** أو تشغيل `Claude Code` / `Codex`، يكتشفُ الوكيلُ المهارةَ ويقرؤها من تلقاء نفسه عند صياغة أي نص باللغة العربية.
@@ -123,7 +127,7 @@ Copy-Item -Recurse -Force "path\to\SKILL.md", "path\to\references", "path\to\exa
 ### رابعاً: الاستخدام اليدوي (Direct System Prompt / Custom Instructions)
 
 إذا كنت تستخدم واجهات الويب (مثل ChatGPT أو Claude أو Gemini) مباشرة دون بيئة برمجية:
-* افتح ملف [`SKILL.md`](SKILL.md) وانسخ محتواه وضعه في خانة **التعليمات المخصصة (Custom Instructions)** أو **System Prompt**.
+* افتح ملف [`skills/arabic-writing-skill/SKILL.md`](skills/arabic-writing-skill/SKILL.md) وانسخ محتواه وضعه في خانة **التعليمات المخصصة (Custom Instructions)** أو **System Prompt**.
 
 ---
 
