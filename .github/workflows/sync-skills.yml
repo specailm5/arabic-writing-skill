@@ -6,11 +6,7 @@ on:
       - master
       - main
     paths:
-      - 'SKILL.md'
-      - 'references/**'
-      - 'examples/**'
-      - 'scripts/**'
-      - 'resources/**'
+      - 'skills/**'
       - '.agents/skills/arabic-writing-skill/**'
       - '.claude/skills/arabic-writing-skill/**'
   workflow_dispatch:
@@ -46,7 +42,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
           # Stage skill files and mirrored directories
-          git add SKILL.md references examples .agents .claude
+          git add skills .agents .claude
           
           if [ -d "scripts" ]; then git add scripts; fi
           if [ -d "resources" ]; then git add resources; fi

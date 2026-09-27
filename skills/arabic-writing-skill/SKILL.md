@@ -1,6 +1,7 @@
 ---
 name: arabic-writing-skill
 description: "Mastery guide and linting skill for authentic Arabic writing, composition, and translation based on the authoritative treatise 'Al-Aranjiya' (العَرَنْجِيَّة) by Ahmad Al-Ghamdi. Eliminates syntactic calques, westernized phraseology (العرنجية), pseudo-Arabic grammatical errors, passive-voice pollution, nominalized verb clichés, and translation loans to produce pure, idiomatic, eloquent Arabic (العربية الفصيحة الأصيلة). Use whenever writing Arabic essays, reports, stories, documentation, or translating/editing text from English to Arabic."
+license: MIT
 ---
 
 # مهارة الكتابة العربية الفصيحة ونبذ العَرَنْجِيَّة
