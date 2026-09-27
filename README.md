@@ -3,6 +3,10 @@
 
 **Arabic writing skill for AI agents** — strips English calques and translated phraseology (العَرَنْجِيَّة) from Arabic text: `قام بزيارة` → `زار`, `تم التوقيع بواسطة` → `وقّع`. Works with Claude Code, Codex, Antigravity and VS Code agent harnesses.
 
+https://github.com/user-attachments/assets/b62ce401-d351-4ba8-a17d-3147b6b4f468
+
+
+
 🔗 **الموقع المرجعي (المعجم والتراكيب والنماذج): [specailm5.github.io/arabic-writing-skill](https://specailm5.github.io/arabic-writing-skill/)**
 
 > مهارة برمجية ولغوية احترافية لنماذج الذكاء الاصطناعي والمحررات الذكية (Codex، Claude Code، Antigravity IDE، VS Code Agent Harness) لتدقيق النصوص والترجمات العربية وتخليصها من **«العَرَنْجِيَّة»** (الأساليب والتراكيب الإفرنجية المنقولة بلفظها)، استناداً إلى كتاب **«العَرَنْجِيَّة: بلغات أعجمية وألسن عربية»** للترجمان **أحمد الغامدي**.
