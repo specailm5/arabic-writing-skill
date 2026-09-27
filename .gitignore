@@ -1,0 +1,20 @@
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary & Log files
+*.log
+*.tmp
+.system_generated/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+aranjiya.pdf
+
+# IDE
+.vscode/
