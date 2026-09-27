@@ -3,13 +3,19 @@
 
 **Arabic writing skill for AI agents** — strips English calques and translated phraseology (العَرَنْجِيَّة) from Arabic text: `قام بزيارة` → `زار`, `تم التوقيع بواسطة` → `وقّع`. Works with Claude Code, Codex, Antigravity and VS Code agent harnesses.
 
-https://github.com/user-attachments/assets/b62ce401-d351-4ba8-a17d-3147b6b4f468
-
-
-
 🔗 **الموقع المرجعي (المعجم والتراكيب والنماذج): [specailm5.github.io/arabic-writing-skill](https://specailm5.github.io/arabic-writing-skill/)**
 
 > مهارة برمجية ولغوية احترافية لنماذج الذكاء الاصطناعي والمحررات الذكية (Codex، Claude Code، Antigravity IDE، VS Code Agent Harness) لتدقيق النصوص والترجمات العربية وتخليصها من **«العَرَنْجِيَّة»** (الأساليب والتراكيب الإفرنجية المنقولة بلفظها)، استناداً إلى كتاب **«العَرَنْجِيَّة: بلغات أعجمية وألسن عربية»** للترجمان **أحمد الغامدي**.
+
+---
+
+## 🎬 عرض توضيحي (Demo)
+
+<video src="https://github.com/user-attachments/assets/b62ce401-d351-4ba8-a17d-3147b6b4f468" controls muted playsinline width="100%"></video>
+
+**فيديو صامت (٢٧٫٨ ثانية)** — من `قام بزيارة` إلى `زار`، ثم المعجمُ وسجلُ التراكيب والنماذج، ثم أمرُ التثبيت.
+
+> A silent 27.8-second walkthrough — no audio track by design. If the player doesn't load in your reader, the same file is committed to this repo: [`docs/media/arabic-writing-skill.mp4`](docs/media/arabic-writing-skill.mp4).
 
 ---
 
@@ -36,6 +42,7 @@ arabic-writing-skill/
 │   └── before_after_texts.md             # نماذج كاملة (سياسية، إدارية، فكرية) قبل وبعد التحوير
 │
 ├── docs/                                 # الموقع المرجعي الإلكتروني والتوثيق (GitHub Pages)
+│   └── media/arabic-writing-skill.mp4    # العرض التوضيحي (فيديو صامت، ٢٧٫٨ ثانية)
 │
 ├── .agents/skills/arabic-writing-skill/  # مسار الاكتشاف التلقائي لبيئات Codex و Antigravity
 │
