@@ -1,0 +1,37 @@
+name: اقتراح ميزة
+description: اقترح تحسيناً للمهارة أو التوثيق
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        شكراً لاقتراحك. ركّز على المشكلة قبل الحل.
+  - type: input
+    id: skill
+    attributes:
+      label: المهارة
+      placeholder: arabic-grammar-skill
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: ما المشكلة؟
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: ما اقتراحك؟
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: المصادر المقترحة
+      description: إن كان الاقتراح قاعدة أو مثالاً، اذكر الكتاب والموضع.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: بدائل

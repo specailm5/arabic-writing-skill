@@ -1,6 +1,13 @@
 # مهارة الكتابة العربية الفصيحة ونبذ العَرَنْجِيَّة
 ### (Arabic Writing Skill — Anti-Aranjiya)
 
+<p align="center">
+  <a href="https://github.com/specailm5/arabic-writing-skill/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/specailm5/arabic-writing-skill?style=flat-square"></a>
+  <a href="https://github.com/specailm5/arabic-writing-skill/commits/master"><img alt="Last commit" src="https://img.shields.io/github/last-commit/specailm5/arabic-writing-skill?style=flat-square"></a>
+  <a href="https://specailm5.github.io/arabic-writing-skill/"><img alt="Docs" src="https://img.shields.io/badge/docs-live-brightgreen?style=flat-square"></a>
+  <img alt="Agent Skills" src="https://img.shields.io/badge/Agent%20Skills-compatible-5B21B6?style=flat-square">
+</p>
+
 **Arabic writing skill for AI agents** — strips English calques and translated phraseology (العَرَنْجِيَّة) from Arabic text: `قام بزيارة` ← `زار`, `تم التوقيع بواسطة` ← `وقّع`. Works with Claude Code, Codex, Antigravity and VS Code agent harnesses.
 
 🔗 **الموقع المرجعي (المعجم والتراكيب والنماذج): [specailm5.github.io/arabic-writing-skill](https://specailm5.github.io/arabic-writing-skill/)**
@@ -25,7 +32,7 @@
 
 ## 📂 بنية المهارة ومكوناتها
 
-```
+<pre dir="rtl"><code>
 arabic-writing-skill/
 │
 ├── skills/arabic-writing-skill/          # المهارة (تركيب Agent Skills القياسي)
@@ -41,7 +48,7 @@ arabic-writing-skill/
 ├── .agents/skills/arabic-writing-skill/  # مسار الاكتشاف التلقائي لبيئات Codex و Antigravity
 │
 └── .claude/skills/arabic-writing-skill/  # مسار الاكتشاف التلقائي لبيئة Claude Code
-```
+</code></pre>
 
 ---
 
@@ -133,7 +140,7 @@ Copy-Item -Recurse -Force "path\to\skills\arabic-writing-skill\*" ".agents\skill
 
 ## ⚡ كيف تعمل المهارة؟ (أوامر ونواهٍ سريعة)
 
-<table dir="rtl">
+<table dir="rtl" align="right">
 <thead>
 <tr>
 <th align="right">الأسلوب العرنجي الهجين ❌</th>
@@ -191,6 +198,24 @@ Copy-Item -Recurse -Force "path\to\skills\arabic-writing-skill\*" ".agents\skill
 
 * كتاب **«العَرَنْجِيَّة: بلغات أعجمية وألسن عربية»**، للترجمان **أحمد الغامدي** (الطبعة الثانية 1445هـ / 2023م).
 * نصوص وشواهد الأوائل (الجاحظ في «البيان والتبيين» و«البخلاء»، القاسم بن سلام في «الأموال»، نهج البلاغة، صحيح البخاري).
+
+---
+
+## 🤝 المساهمة
+
+نرحب بالمساهمات التي تحسّن المادة أو التحرير أو التوثيق. اقرأ [CONTRIBUTING.md](CONTRIBUTING.md) قبل فتح طلب سحب، والتزم بـ[قواعد السلوك](CODE_OF_CONDUCT.md).
+
+## 🛡️ الأمان
+
+إن وجدت مشكلة أمنية، فلا تفتح قضية عامة؛ راجع [SECURITY.md](SECURITY.md).
+
+## 📄 سجل التغييرات
+
+راجع [CHANGELOG.md](CHANGELOG.md) لمعرفة ما أُضيف في كل إصدار.
+
+## 📬 الدعم
+
+للأسئلة والاقتراحات: [افتح قضية](https://github.com/specailm5/arabic-writing-skill/issues).
 
 ---
 

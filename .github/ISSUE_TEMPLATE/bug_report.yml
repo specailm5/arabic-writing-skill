@@ -1,0 +1,48 @@
+name: بلاغ عن خطأ
+description: أبلغ عن خطأ في المهارة أو التوثيق
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        شكراً للإبلاغ. املأ الحقول التالية بأكبر قدر من الدقة.
+  - type: input
+    id: skill
+    attributes:
+      label: المهارة
+      placeholder: arabic-grammar-skill
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: ما الذي حدث؟
+      description: صف الخطأ بدقة.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: ما المتوقع؟
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: خطوات إعادة الإنتاج
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: البيئة
+      placeholder: Claude Code / Codex / VS Code / Web
+  - type: textarea
+    id: evidence
+    attributes:
+      label: المصدر أو الدليل
+      description: إن كان الخطأ في قاعدة أو مرجع، اذكر الكتاب والموضع.
