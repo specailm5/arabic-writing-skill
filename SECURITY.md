@@ -20,6 +20,7 @@
 </tr>
 </tbody>
 </table>
+<br clear="all">
 
 ## الإبلاغ عن ثغرة
 
